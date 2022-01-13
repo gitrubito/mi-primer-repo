@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>epigra</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <div class="center section" id="circulo">
+
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue-only">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+
+    <div class="hide" id="contenido">
+        <main>
+
+            <div class="contenedor__todo">
+                <div class="caja__trasera">
+                    <div class="caja__trasera-login">
+                      <p class="center-align">
+                        <img src="bg5.jpg"   width="70" height="70" alt="" >
+                      </p>
+                        <h4>¿Si tienes una cuenta?</h4>
+                        <p>Inicia sesión para ingresar al Sistema</p>
+                        <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                    </div>
+                    <div class="caja__trasera-register">
+                      <p class="center-align">
+                        <img src="bg5.jpg"   width="70" height="70" alt="" >
+                      </p>
+                        <h4>¿Si no tienes una cuenta?</h4>
+                        <p>Regístrate para que puedas iniciar sesión</p>
+                        <button id="btn__registrarse">Regístrarse</button>
+                    </div>
+                </div>
+
+                <!--Formulario de Login y registro-->
+                <div class="contenedor__login-register">
+                    <!--Login-->
+                    <form action="" class="formulario__login">
+                        <h2>Iniciar Sesión</h2>
+                        <input type="text" placeholder="Correo Electronico">
+                        <input type="password" placeholder="Contraseña">
+                        <!-- <button>Entrar</button> -->
+                        <br><br>
+                        <p class="center-align">
+                           <a href="lune01.html" class="btn-small modal-trigger green" type="submit">Ingresar</a>
+                        </p>
+
+                    </form>
+
+                    <!--Register-->
+                    <form action="" class="formulario__register">
+                        <h2>Regístrarse</h2>
+                        <input type="text" placeholder="Nombre completo">
+                        <input type="text" placeholder="Correo Electronico">
+                        <input type="text" placeholder="Usuario">
+                        <input type="password" placeholder="Contraseña">
+                        <br><br>
+                        <p class="center-align">
+                           <a href="#" class="btn-small modal-trigger red" type="submit">Regístrarse</a>
+                        </p>
+                        <!-- <button>Regístrarse</button> -->
+                    </form>
+                </div>
+            </div>
+
+        </main>
+    </div>    
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script> 
+
+          <script>
+           window.addEventListener("load", () =>{
+           setTimeout(carga, 4000);
+           //carga();
+           function carga(){
+            document.getElementById("circulo").className = "hide";
+            document.getElementById("contenido").className = "center animated fadeInDown";
+             }
+           })
+          </script>
+
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.slider');
+            var instances = M.Slider.init(elems,{
+            indicators: true,
+            height: 400,
+            interval: 2510
+            });
+            var elems = document.querySelectorAll('.materialboxed');
+            var instances = M.Materialbox.init(elems);
+          });
+          </script>
+        
+           <script>
+              document.addEventListener('DOMContentLoaded', function() {
+              var elems = document.querySelectorAll('.modal');
+              var instances = M.Modal.init(elems);
+              });
+           </script>
+        
+           <script>  
+              function alerta(){
+                M.toast({html: 'Formulario enviado',
+                displayLenght: 2000,
+                classes: "red",
+                completeCallback: function(){alert('Informe enviado')}
+                })
+              }
+            </script>
+        
+            <script>  
+              function alerta1(){
+                alert("usuario autorizado\rpresione enter para ingresar");
+                alert("presione enter para ingresar");
+              }
+            </script>
+        
+        
+            <script> 
+              document.addEventListener("DOMContentLoaded", function() {
+                  M.AutoInit(); 
+              });
+            </script>
+
+        <script src="log.js"></script>
+</body>
+</html>
